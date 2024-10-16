@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Source and Health Issues Data Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+            display: none; /* Hide the video initially */
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            margin-top: 20px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .btn-preview {
+            background-color: #a4c0de;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+      function toggleVideo() {
+        var video = document.getElementById("koboVideo");
+            if (video.style.display === "none") {
+                video.style.display = "block"; // Show the video
+            } else {
+               video.style.display = "none"; // Hide the video
+            }
+      }
+    </script>
+</head>
+<body>
+
+<!-- Title Section -->
+<div class="container text-white rounded" style="background-color: #14c3f4">
+   <h1 class="text-center fs-1" style="font-family: 'Montserrat', sans-serif; color: #f4f4f4; text-align: center;" >Case Study: Monitoring Water Access and Quality in Rural Communities</h1>
+</div>
+
+<!-- Overview Section -->
+ <div class="container" id="overview">
+    <img src="media/overview.png" alt="Project Overview">
+ </div>
+
+<div class="container" id="showcase">
+    <button class="btn-preview" onclick="toggleVideo()">Click here to play video showcasing project</button>
+    <video id="koboVideo" controls>
+     <source src="media/demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+
+<div class="container" >
+
+    <!-- Introduction Section -->
+    <div class="section" id="introduction">
+        <h2>Objective</h2>
+        <p>To collect and analyze data on water access and quality in remote areas in real-time, providing local authorities and NGOs with actionable insights to improve water infrastructure and public health outcomes.</p>
+        <h2>Problem Statement</h2>
+        <p>Rural communities often face challenges with access to clean water. Tracking water availability, quality, and the condition of water sources in these areas is vital for public health and long-term planning, but traditional data collection methods are slow and inefficient. A real-time, scalable solution is needed to improve the monitoring process.</p>
+        <h2>Proposed Solution</h2>
+        <p>Using KoboCollect for mobile data collection and Power BI for real-time data visualization, the goal is to monitor and report on</p>
+        <ul>
+          <li>Water source availability (e.g., wells, rivers, boreholes).</li>
+          <li>Water quality indicators (e.g., pH level, contamination, turbidity).</li>
+          <li>Infrastructure conditions (e.g., broken pumps, damaged wells).</li>
+          <li>Access patterns (e.g., distance traveled to fetch water, frequency of usage).</li>
+        </ul>
+        <h2>Implementation Plan</h2>
+        <ul>
+          <li>XLS Form Designing</li>
+          <li>KoboCollect</li>
+          <li>Power BI Dashboarding</li>
+        </ul>
+    </div>
+  
+    <!-- XLS Form Designing Section -->
+    <div class="section" id="xls-form">
+        <h2>1. XLS Form Designing</h2>
+        <p>The XLS form was carefully designed to include advanced logic, validation checks, and skip patterns to ensure accurate data collection. This process allowed us to ensure that only the necessary fields were filled, and validation helped reduce errors in data collection.</p>
+        <p>To see the XLS file, <a href="media/XLS Form.xlsx" target="_blank">download here</a>.</p>
+    </div>
+
+    <!-- KoboCollect Section -->
+    <div class="section" id="kobo-collect">
+        <h2>2. KoboCollect</h2>
+        <p>Data was collected in real-time using the KoboCollect app, with immediate syncing of data for monitoring. This enabled us to capture the water sources' condition and health issues as they were reported in the field.</p>
+    </div>
+
+    <!-- Power BI Dashboarding Section -->
+    <div class="section" id="power-bi">
+        <h2>3. Power BI Dashboarding</h2>
+        <p>The collected data was analyzed and visualized using Power BI, allowing for detailed insights into water source conditions and reported health issues across regions. This dashboard provided a clear overview of the situation and helped identify areas needing immediate attention.</p> 
+        <p>To see the file report, <a href="media/Water access and quality assessment v1.pbix" target="_blank">download the pbix here</a>.</p>
+        <img src="media/pb1.jpg" alt="Power BI Dashboard - About">
+        <img src="media/pb2.jpg" alt="Power BI Dashboard - Overview">
+        <img src="media/pb3.jpg" alt="Power BI Dashboard - Detailed reports">
+    </div>
+
+
+    <!-- Insights  Section -->
+    <div class="section" id="insights">
+        <h2>Key Findings</h2>
+        <p>The insights seen from the survey:</p>
+        <ul>
+            <li>Most common water source available in Districts are 'Boreholes'</li>
+            <li>Atleast alot of water sources are near people within communities</li>
+            <li>Sadly alot of water sources that were tested are not okay or not functioning</li>
+            <li>As a result people need more water sources as well as proper maintenance of the already existing water sources</li>
+            <li>Which in return will reduce health issues of Malaria, Diarrhea and Cholera</li>
+          </ul>
+    </div>
+
+    <!-- Action  Section -->
+    <div class="section" id="action">
+        <h2>Action</h2>
+        <ul>
+            <li>To make any impact and help the country, possibly take immediate action starting with the Central Region then Northern Region and finally the Southern Region</li>
+            <li>Expected available water sources would be Boreholes which either need maintenance or rather ways to assist the communities to make sure the water is safe to drink</li>
+            <li>As well as make sure the water sources are clean + have growing vegetation/bush around the sources cut to reduce accumulation of Mosquitoes causing Malaria</li>
+          </ul>
+    </div>
+
+
+
+</div>
+
+</body>
+</html>
