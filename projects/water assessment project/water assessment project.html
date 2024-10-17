@@ -49,6 +49,20 @@
             font-size: 16px;
             cursor: pointer;
         }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
     </style>
     <script>
       function toggleVideo() {
@@ -63,6 +77,9 @@
 </head>
 <body>
 
+    <!-- Back Button -->
+    <a href="javascript:history.back()" class="back-button">← Back</a>
+
 <!-- Title Section -->
 <div class="container text-white rounded" style="background-color: #14c3f4">
    <h1 class="text-center fs-1" style="font-family: 'Montserrat', sans-serif; color: #f4f4f4; text-align: center;" >Case Study: Monitoring Water Access and Quality in Rural Communities</h1>
@@ -71,6 +88,10 @@
 <!-- Overview Section -->
  <div class="container" id="overview">
     <img src="media/overview.png" alt="Project Overview">
+    <ul style="list-style-type:circle; font-size:90%; text-align: center;">
+        <li>Leveraged KoboCollect to efficiently gather real-time water quality and access data from local communities, ensuring accurate and timely data collection in rural areas.</li>
+        <li>Developed Power BI interactive dashboards to visualize and analyze data in real time, providing critical insights for improving water access and quality in underserved communities.</li>
+    </ul>
  </div>
 
 <div class="container" id="showcase">
@@ -99,11 +120,11 @@
           <li>Access patterns (e.g., distance traveled to fetch water, frequency of usage).</li>
         </ul>
         <h2>Implementation Plan</h2>
-        <ul>
+        <ol type="1">
           <li>XLS Form Designing</li>
           <li>KoboCollect</li>
           <li>Power BI Dashboarding</li>
-        </ul>
+        </ol>
     </div>
   
     <!-- XLS Form Designing Section -->
