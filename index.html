@@ -16,6 +16,7 @@
 <style>
   p,h1,h2,h5{
     font-family: 'Merriweather', serif;
+    
   }
 </style>
 <!-- End of style -->
@@ -24,16 +25,16 @@
 <body>
 
 <!-- Body container   -->
-<div class="container lh-lg">
+<div class="container-fluid lh-lg">
  
   <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-4 rounded justify-content-center">
     <h1 class="text-white ">MOSES GWAZA</h1>
   </nav> -->
   
   <!-- Header -->
-  <div class=" p-5 text-white rounded" style="background-color: #1e252d">
-    <h1 class="text-center fs-1" style="font-family: 'Montserrat', sans-serif;" >MOSES GWAZA</h1>
-    <h1 class="text-center fs-1" style="font-family: 'Montserrat', sans-serif;" >PORTFOLIO</h1>
+  <div class=" p-1 text-white rounded" style="background-color: #1e252d">
+    <h1 class="text-center fs-4" style="font-family: 'Montserrat', sans-serif;" >MOSES GWAZA</h1>
+    <h1 class="text-center fs-5" style="font-family: 'Montserrat', sans-serif;" >PORTFOLIO</h1>
   
   </div>
   <!-- End of Header -->
@@ -42,194 +43,182 @@
   <!-- Subtitle -->
   <div class="container-fluid mt-4 text-center">
     <p >
-      This is a portfolio with various projects by Moses Gwaza.The projects demonstrate the skills of using different tools to tranform raw data into useful insights with the core focus on solving a problem.
+      Have various projects that demonstrate the use of different tools to tranform raw data into useful insights with the core focus on solving a problem.
     </p>
-    <p>
-      The projects use <b>Excel and Google Sheets</b> for smaller datasets, the Power Platform with particular focus on <b>Power BI</b>, programming languages <b>R and Python</b> from Webscraping to creation of Data Viz, <b>SQL</b> for data exploration and manipulation, as well as telling stories in form of charts and dashboards using <b>Tableau</b>.
-    </p>
+   
+    <p><b>KoboToolBox | Excel | SQL | Pentaho | Python | R | Tableau | Power BI | Power Automate</b></p>
+    <hr style="width: 30%; margin: auto; border: 4px solid rgb(226, 226, 6);"/> <!-- Horizontal line -->
   </div>
   <!-- End of Subtitle -->
  
-  <!-- Row 1 -->
-  <div class="row mt-1">
-    <!-- Column 1 -->
-    <div class="col-sm-12 col-md-4 p-3 ">
-      <div class="card border-light" >
-        <img class="card-img-top mt-4" src="images/water-icon.png" >
-        <div class="card-body text-center">
-          <h5 class="card-title "><a href="projects/water assessment project/water assessment project.html">Water assessment in rural areas</a></h5>
-          <p class="card-text">
-            This project analyzes water quality and related health issues reported by communities across various regions, drawing from real-time survey data collected from local communities to real-time dashboarding in Power BI.
-          </p>
-            
-        </div>
+<!-- Row 1 -->
+<div class="row mt-1 ">
+  <!-- Column 1 -->
+  <div class="col-sm-12 col-md-3 p-1">
+    <div class="card border-light">
+      <img class="card-img-top mt-4" src="images/water.png" style="width:250px;height:170px; display: block; margin: 0 auto;">
+      <div class="card-body text-center">
+        <h5 class="card-title"><a href="projects/water assessment project/water assessment project.html">Water assessment in rural communities</a></h5>
+        <p><b>KoboToolBox | Power BI</b></p>
+        <p class="card-text">
+          Assessed water sources in rural settings via KoboCollect and real-time Power BI dashboarding.
+        </p>
       </div>
     </div>
-    <!-- End of Column 1 -->
-
-    <!-- Column 2 -->
-    <div class="col-sm-12 col-md-4 p-3 ">
-      <div class="card border-light" >
-        <img class="card-img-top mt-4" src="images/covid2.png" >
-        <div class="card-body text-center">
-          <div class="container">
-            <h5 class="card-title "><a href="https://rpubs.com/moses_gwaza/covid19_report">2020-2022 Covid-19 Dashboard</a></h5>
-          </div>
-          <p class="card-text">
-            This project analyzes the WHO data of COVID-19 pandemic from January 2020 to November 2022 using <a href = "https://github.com/M-Gwaza/Python-Projects/blob/main/WHO-COVID-19-global-data.ipynb">Python</a> to uncover trends and answer key questions. An R Shiny interactive dashboard showcases results.
-          </p>
-
-        </div>
-      </div>
-    </div>
-    <!-- End of Column 2 -->
-
-    <!-- Column 3 -->
-    <div class="col-sm-12 col-md-4 p-3 ">
-      <div class="card border-light" >
-        <img class="card-img-top mt-4" src="images/doctor.png" >
-        <div class="card-body text-center">
-          <div class="container">
-            <h5 class="card-title "> <a href = "https://public.tableau.com/app/profile/moses.gwaza/viz/CholeraDashboard_16586925793900/Dashboard4">2022 Malawi Cholera Dashboard</a>
-            </h5>
-          </div>
-          
-          <p class="card-text">
-            The Cholera Project in Tableau analyzes the 2022 Cholera outbreak in Malawi, focusing on data from February to August to identify key insights such as total cases, 
-            affected regions, and risk factors like unsafe water sources.
-          </p>
-
-        </div>
-      </div>
-    </div>
-    <!-- End of Column 3 -->
-
   </div>
-  <!-- End of row 1-->
+  <!-- End of Column 1 -->
+
+  <!-- Column 2 -->
+  <div class="col-sm-12 col-md-3 p-1">
+    <div class="card border-light">
+      <img class="card-img-top mt-4" src="images/r shiny.png" style="width:250px;height:170px; display: block; margin: 0 auto;">
+      <div class="card-body text-center">
+        <div class="container">
+          <h5 class="card-title"><a href="https://rpubs.com/moses_gwaza/covid19_report">2020-2022 Covid-19 Dashboard</a></h5>
+        </div>
+        <p><b>Python | R Shiny</b></p>
+        <p class="card-text">
+          Analyzed WHO data for COVID-19 using <a href="https://github.com/M-Gwaza/Python-Projects/blob/main/WHO-COVID-19-global-data.ipynb">Python</a> and reported insights using an Interactive dashboard.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- End of Column 2 -->
+
+  <!-- Column 3 -->
+  <div class="col-sm-12 col-md-3 p-1">
+    <div class="card border-light">
+      <img class="card-img-top mt-4" src="images/cholera.png" style="width:250px;height:170px; display: block; margin: 0 auto;">
+      <div class="card-body text-center">
+        <div class="container">
+          <h5 class="card-title"><a href="https://public.tableau.com/app/profile/moses.gwaza/viz/CholeraDashboard_16586925793900/Dashboard4">2022 Malawi Cholera Dashboard</a></h5>
+        </div>
+        <p><b>Tableau</b></p>
+        <p class="card-text">
+          Analyzed the Cholera outbreak in Malawi identifying affected regions, case details and risk factors.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- End of Column 3 -->
+
+  <!-- Column 4 -->
+  <div class="col-sm-12 col-md-3 p-1">
+    <div class="card border-light">
+      <img class="card-img-top mt-4" src="images/suicide_rates.png" style="width:250px;height:170px; display: block; margin: 0 auto;">
+      <div class="card-body text-center">
+        <div class="container">
+          <h5 class="card-title" style="color:blue"><a href="https://docs.google.com/uc?export=download&id=1xyx7ANWbdssghuFpGB0h3t7J7m-bej-h">Global Suicide Rates 1985 - 2016</a></h5>
+        </div>
+        <p><b>Excel</b></p>
+        <p class="card-text">
+          Analyzed suicide rates globally understanding cases between ages, generation, gender, and countries.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- End of Column 4 -->
+
+</div>
+<!-- End of row 1 -->
+
 
 
   <!-- Row 2 -->
-  <div class="row mt-1">
+  <div class="row mt-1" style="text-align: center;">
+    
+    <h3 style="text-align: center;">OTHER PROJECTS REPOSITORIES</h3>
+    <p>These repositories showcase skills of ETL pipeline development in Pentaho, scripting in Python, SQL and R</p>
+    <hr style="width: 30%; margin: auto; border: 4px solid rgb(226, 226, 6);"/> <!-- Horizontal line -->
+    <br>
+    <div class="col-sm-11" style="margin: 0 auto; ">
+    <table style="width: 100%; border-collapse: collapse; text-align: left; border: 2px solid rgb(195, 191, 191);">
+      <tr >
+        <th style="padding: 10px; ">Name</th>
+        <th style="padding: 10px; ">What was done</th>
+        <th style="padding: 10px; ">Examples/ Topics covered</th>
+        <th style="padding: 10px; ">Link</th>
+      </tr>
+      <tr style="background-color: #f2f2f2; border-bottom: 1px solid #DDD;">
+        <td style="padding: 10px; ">Transforming OpenMRS HIV data using ETL Pipelines</td>
+        <td style="padding: 10px; ">Transformed OpenMRS HIV patient data to a Common Data Model and performed patient-level analysis, visualizing the results</td>
+        <td style="padding: 10px; ">ETLs pipelines using Pentaho for MySQL and PostgreSQL databases, Data quality checks, Dashboarding</td>
+        <td style="padding: 10px; "><a href="https://github.com/M-Gwaza/OpenMRS-to-OHDSI">link</a></td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; ">Python Projects</td>
+        <td style="padding: 10px; ">Predictive modeling, web scraping</td>
+        <td style="padding: 10px; ">House prices, Lung cancer</td>
+        <td style="padding: 10px; "><a href="https://github.com/M-Gwaza/Python-Projects/">link</a></td>
+      </tr>
+      <tr style="background-color: #f2f2f2; border-bottom: 1px solid #DDD;">
+        <td style="padding: 10px; ">Google Certification Projects</td>
+        <td style="padding: 10px; ">Descriptive analysis, reporting</td>
+        <td style="padding: 10px; ">Analyzing smart apps data for women's health</td>
+        <td style="padding: 10px; "><a href="https://www.rpubs.com/moses_gwaza/google_analytics_project">link</a></td>
+      </tr>
+    </table>
+    
+    
+     
 
-    <!-- Column 1 -->
-    <div class="col-sm-12 col-md-4 p-3 ">
-        <div class="card border-light" >
-          <img class="card-img-top mt-4" src="images/openmrs.png" >
-          <div class="card-body text-center">
-            <h5 class="card-title "><a href="https://github.com/M-Gwaza/OpenMRS-to-OHDSI">Transforming OpenMRS HIV Data</a></h5>
-            <p class="card-text">
-              This project implements an ETL pipeline to transform OpenMRS HIV patient data to a Common Data Model and performs patient-level analysis, visualizing the results. Uses SQL, Pentaho, PostgreSQL and MySQL Databases, OHDSI Tools.
-            </p>
-              
-          </div>
-        </div>
-      </div>
-      <!-- End of Column 1 -->
-
-    <!-- Column 2 -->
-    <div class="col-sm-12 col-md-4 p-3 ">
-      <div class="card border-light" >
-        <img class="card-img-top mt-4" src="images/excel.png">
-        <div class="card-body text-center">
-          <div class="container">
-            <h5 class="card-title">Excel Projects</h5>
-          </div>
-          <p class="card-text">
-            Advanced compelling Dashboards were built for 
-            <a href="https://docs.google.com/uc?export=download&id=1xyx7ANWbdssghuFpGB0h3t7J7m-bej-h">Suicide rates</a>
-            and  
-            <a href="https://docs.google.com/uc?export=download&id=1JO1wEDQQh4thZBV0weDzYtPhlhVaflE-">Financial statements</a>
-            . Data Filters, Functions and Formulas, Charts and Plots, Pivot Tables, Form Controls were used.
-          </p>
-
-        </div>
-      </div>
-    </div>
-    <!-- End of Column 2 -->
-
-    <!-- Column 3 -->
-    <div class="col-sm-12 col-md-4 p-3 ">
-        <div class="card border-light" >
-          <img class="card-img-top mt-4" src="images/lung_cancer.png" >
-          <div class="card-body text-center">
-            <h5 class="card-title "><a href="https://nbviewer.org/github/M-Gwaza/Python-Projects/blob/main/Lung%20Cancer%20Prediction.ipynb">Lung Cancer Predictive Analysis</a></h5>
-            <p class="card-text">
-              This uses Kaggle Survey data for Descriptive and Predictive analysis using Python. Showcased results using a Decision Tree, a Funnel Chart and an Interactive Predictive Widget.
-            </p>
-  
-          </div>
-        </div>
-      </div>
-      <!-- End of Column 3 -->
-
+   </div> 
   </div>
   <!-- End of row 2 -->
 
-  <!-- Row 3 -->
-  <div class="row mt-1">
-    <!-- Column 1 -->
-    <div class="col-sm-12 col-md-4 p-3 ">
-      <div class="card border-light" >
-        <img class="card-img-top mt-4" src="images/google.png">
-        <div class="card-body text-center">
-          <div class="container">
-            <h5 class="card-title">Google Analytics Projects</h5>
-          </div>
-          
-          <p class="card-text">
-            This directory contains two projects by the Google Analytics Certificate Program. <a href="https://www.rpubs.com/moses_gwaza/google_analytics_project">Smart Devices on Women's health</a> using R and <a href="https://github.com/M-Gwaza/Healthcare-Projects/tree/main/Projects/Happiness%20Score">World Happiness Score</a> in Tableau.
-            
-          </p>
-
-        </div>
-      </div>
-    </div>
-    <!-- End of Column 1 -->
-
-    <!-- Column 2 -->
-    <div class="col-sm-12 col-md-4 p-3 ">
-      <div class="card border-light" >
-        <img class="card-img-top mt-4" src="images/house.png">
-        <div class="card-body text-center">
-          <div class="container">
-            <h5 class="card-title "><a href="https://github.com/M-Gwaza/Python-Projects/blob/main/housing-prices-prediction-in-bangalore-india.ipynb">India House Predictions</a></h5>
-          </div>
-          <p class="card-text">
-
-            Linear Regression in Python was used to train a model that takes house prices and tries to make a prediction . The dataset is of Bangalore India found on Kaggle.
-          </p>
-
-        </div>
-      </div>
-    </div>
-    <!-- End of Column 2 -->
-
-    <!-- Column 3 -->
-    <div class="col-sm-12 col-md-4 p-3 ">
-        <div class="card border-light" >
-          <img class="card-img-top mt-4" src="images/sales.png">
-          <div class="card-body text-center">
-            <h5 class="card-title ">Sales Insights Project</h5>
-            <p class="card-text">
-              A 
-              <a href="https://docs.google.com/uc?export=download&id=1h1urvyGadmpGdNiIs7PMCUeVSePLDa31">video demonstration</a>
-              of Power BI's interactive dashboard and a 
-              <a href="https://github.com/M-Gwaza/Sales-insights-projects">fully documented project</a>
-              - loads and explores data in MySQL, connects to Power BI, uses Query Editor, modelling and Dashboarding.
-              
-             </p>
+  <br>
+<!-- Row 3 -->
+<div class="row mt-1" style="text-align: center;">
+  <h3>Professional Certifications</h3>
   
-          </div>
-        </div>
-      </div>
-      <!-- End of Column 3 -->
+  <p>My growing list of proprietary, exam-based certifications.</p>
+  <hr style="width: 30%; margin: auto; border: 4px solid rgb(226, 226, 6);"/> <!-- Horizontal line -->
+  <br>
+  <div class="container">
+  <table style="width: 50%; margin: 0 auto; text-align: left; border-collapse: collapse;">
+      <tr>
+          <td style="padding: 20px 10px;"> <!-- Adjust padding here for more space -->
+              <img src="images/comptia data+.png" alt="Image description" style="width:80px;height:80px; display: block; margin: 0 auto;">
+          </td>
+          <td style="padding: 20px 10px;"> <!-- Adjust padding here for more space -->
+              <p style="margin-top: 20px;"><b>Comptia Data+ | Issued 2022</b></p> <!-- Add margin here for separation -->
+          </td>
+      </tr>
+      <tr>
+          <td style="padding: 20px 10px;">
+              <img src="images/azure-data-fundamentals-600x600.png" alt="Image description" style="width:80px;height:80px; display: block; margin: 0 auto;">
+          </td>
+          <td style="padding: 20px 10px;">
+              <p style="margin-top: 20px;"><b>Microsoft Azure Data Fundamentals (DP-900) | Issued 2022</b></p>
+          </td>
+      </tr>
+      <tr>
+          <td style="padding: 20px 10px;">
+              <img src="images/power platform fundamentals.png" alt="Image description" style="width:80px;height:80px; display: block; margin: 0 auto;">
+          </td>
+          <td style="padding: 20px 10px;">
+              <p style="margin-top: 20px;"><b>Microsoft Power Platforms Fundamentals (PL-900) | Issued 2022</b></p>
+          </td>
+      </tr>
+  </table>
+</div>
+</div>
+
+  <!-- End of row 3 -->
+
+
+
+
+  <br>
+
+
 
   <!-- Footer -->
-  <div class="container">
+  
     <!-- Row -->
     <div class="mt-1 p-1 text-white rounded text-center" style="background-color: #1e252d">
 
-        <h2>"Computer! Organize the data."</h2>
+        <h5>"Computer! Organize the data."</h5>
         <ul>
           <a href="https://github.com/M-Gwaza"><i class="fa-brands fa-github fa-2x" style="color: #f9fafc;"></i></a>&nbsp;&nbsp;
           <a href="https://mw.linkedin.com/in/moses-gwaza-7488091b6"><i class="fa-brands fa-linkedin fa-2x" style="color: #f9fafc;"></i></a>&nbsp;&nbsp;
@@ -240,10 +229,8 @@
     </div>
 
 
-  </div>
-  <!-- End of Footer --> 
-
   
+  <!-- End of Footer --> 
 
 
 
