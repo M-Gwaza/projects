@@ -122,13 +122,44 @@
         <p>To collect and analyze data on water access and quality in remote areas in real-time, providing local authorities and NGOs with actionable insights to improve water infrastructure and public health outcomes.</p>
         <h2>Problem Statement</h2>
         <p>Rural communities often face challenges with access to clean water. Tracking water availability, quality, and the condition of water sources in these areas is vital for public health and long-term planning, but traditional data collection methods are slow and inefficient. A real-time, scalable solution is needed to improve the monitoring process.</p>
-        <h2>Proposed Solution</h2>
-        <p>Using KoboCollect for mobile data collection and Power BI for real-time data visualization, the goal is to monitor and report on</p>
+        <p><b>Here are questions I was interested in answering:</b></p>
+        <ol>
+            <li>What is the primary water source for villagers?</li>
+            <li>What is the infrastructure condition of this primary water source?</li>
+            <li>Has the water been tested?</li>
+            <li>Is it in the right condition for drinking ?</li>
+            <li>Have there been any health related issues from the water source?</li>
+            <li>How far is the water source to the villagers approximately?</li>
+        </ol>
+        <p><b>I took the following steps to create my analysis:</b></p>
+        <ol>
+            <li> Identified the problem statement together with the exact questions needed to be collected
+            </li>
+            <li>Designed an XLS form formulating the flow how on data would be captured and uploaded it to KoboCollect</li>
+            <li>Collected data using the KoboCollect
+            </li>
+            <li>Got the data into Power BI from KoboToolBox . Used the Power BI Web option specifying the KoboToolBox Form URL and the API </li>
+            <li>Cleaned the data in Power BI using Power Query as the data comes in form of a JSON file and few changes are transform it to a table
+            </li>
+            <li>Reported results using a dashboard whilst creating measures and new columns</li>
+        </ol>
+        <p><b>Here are my key takeaways:</b></p>
+        <ol>
+            <li>Most common water source available in Districts are 'Boreholes'
+            </li>
+            <li>At Least a lot of water sources are near people within communities by 500 Metres </li>
+            <li>Unfortunately a lot of water sources that were tested are not okay or not functioning</li>
+            <li>As a result people need more water sources as well as proper maintenance of the already existing water sources</li>
+            <li>Which in return will reduce health issues of Malaria, Diarrhea and Cholera
+            </li>
+        </ol>
+        <p><b>What actions could be taken from my assessment</b></p>
         <ul>
-          <li>Water source availability (e.g., wells, rivers, boreholes).</li>
-          <li>Water quality indicators (e.g., pH level, contamination, turbidity).</li>
-          <li>Infrastructure conditions (e.g., broken pumps, damaged wells).</li>
-          <li>Access patterns (e.g., distance traveled to fetch water, frequency of usage).</li>
+            <li>To make any impact and help the country, possibly take immediate action starting with the Central Region then Northern Region and finally the Southern Region
+            </li>
+            <li>Expected available water sources would be Boreholes which either need maintenance or rather ways to assist the communities to make sure the water is safe to drink</li>
+            <li>As well as make sure the water sources are clean + have growing vegetation/bush around the sources cut to reduce accumulation of Mosquitoes causing Malaria
+            </li>
         </ul>
         <h2>Implementation Plan</h2>
         <ol type="1">
@@ -160,31 +191,6 @@
         <img src="media/pb2.jpg" alt="Power BI Dashboard - Overview">
         <img src="media/pb3.jpg" alt="Power BI Dashboard - Detailed reports">
     </div>
-
-
-    <!-- Insights  Section -->
-    <div class="section" id="insights">
-        <h2>Key Findings</h2>
-        <p>The insights seen from the survey:</p>
-        <ul>
-            <li>Most common water source available in Districts are 'Boreholes'</li>
-            <li>Atleast alot of water sources are near people within communities</li>
-            <li>Sadly alot of water sources that were tested are not okay or not functioning</li>
-            <li>As a result people need more water sources as well as proper maintenance of the already existing water sources</li>
-            <li>Which in return will reduce health issues of Malaria, Diarrhea and Cholera</li>
-          </ul>
-    </div>
-
-    <!-- Action  Section -->
-    <div class="section" id="action">
-        <h2>Action</h2>
-        <ul>
-            <li>To make any impact and help the country, possibly take immediate action starting with the Central Region then Northern Region and finally the Southern Region</li>
-            <li>Expected available water sources would be Boreholes which either need maintenance or rather ways to assist the communities to make sure the water is safe to drink</li>
-            <li>As well as make sure the water sources are clean + have growing vegetation/bush around the sources cut to reduce accumulation of Mosquitoes causing Malaria</li>
-          </ul>
-    </div>
-
 
 
 </div>
