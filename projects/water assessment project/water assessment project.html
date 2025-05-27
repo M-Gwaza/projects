@@ -17,10 +17,10 @@
             color: #333;
         }
         .container {
-             max-width: 800px;
+             max-width: 1200px;
             margin: 0 auto;
             background: white;
-            padding: 20px;
+            padding: 20px 40px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
         img {
@@ -44,15 +44,39 @@
         table {
         font-family: arial, sans-serif;
         border-collapse: collapse;
+        table-layout: fixed;
+        word-wrap: break-word;
         width: 100%;
         }
         td, th {
         border: 1px solid #dddddd;
         text-align: left;
+        word-break: break-word;
+        white-space: normal;
         padding: 8px;
         }
         tr:nth-child(even) {
         background-color: #dddddd;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 5px;
+            border-left: 3px solid #007BFF;
+            overflow-x: auto;
+            font-family: Consolas, Monaco, 'Courier New', monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        code {
+            color: #333;
+            display: block;
+        }
+        p, li {
+            font-size: clamp(14px, 2vw, 18px);
+            line-height: 1.6;
+            overflow-wrap: break-word;
+            white-space: normal;
         }
         .btn-preview {
             background-color: #a4c0de;
@@ -224,77 +248,74 @@
             <li>Additional transformations are added to perfect the data</li>
             <ul>
                 <li>removing 34 columns - only keeping what's needed</li>
-                ```sql
-                    a
-                ``` 
                 <li>renaming 13 columns</li>
+                <pre><code>= Table.RenameColumns(#"Removed Columns",{{"section_1/district", "district"}, {"begin_group_XWd56z4Et/type_of_water_source", "type_of_water_source"}, {"begin_group_XWd56z4Et/distance_to_water_source", "distance_to_water_source"}, {"begin_group_g5tzRh4Yk/water_source_condition", "water_source_condition"}, {"begin_group_yukPlpiaB/water_status", "water_status"}, {"begin_group_yukPlpiaB/water_has_tests", "water_has_tests"}, {"begin_group_lN4JK1E2l/yes_health_related_issues_followup", "health_related_issues_followup"}, {"begin_group_7JigyZfOV/water_source_improvements", "water_source_improvements"}, {"begin_group_lN4JK1E2l/primary_water_usage", "primary_water_usage"}, {"_geolocation.0", "latitude"}, {"_geolocation.1", "longitude"}})</code></pre>
+                <li>renaming data source from "?format=json" to "table"</li>
+                <pre><code>= Table.RemoveColumns(#"Changed Type",{"formhub/uuid", "start", "end", "today", "section_1/date_of_data_collection", "section_1/date_collector_name", "section_1/region", "section_1/village_name", "section_1/gps_coordinates", "begin_group_XWd56z4Et/other_water_source_available", "begin_group_XWd56z4Et/other_water_sources_available_if_yes", "begin_group_XWd56z4Et/water_availability_frequency", "begin_group_JndsfFkdi/water_clear", "begin_group_JndsfFkdi/water_has_odor", "begin_group_JndsfFkdi/water_taste", "begin_group_yukPlpiaB/water_ph", "begin_group_yukPlpiaB/chlorine_residual", "begin_group_yukPlpiaB/fluoride_content", "begin_group_yukPlpiaB/nitrate_levels", "begin_group_g5tzRh4Yk/infrastructure_maintenance_freq", "begin_group_g5tzRh4Yk/maintenance_personnel", "begin_group_lN4JK1E2l/water_source_people_count", "begin_group_lN4JK1E2l/water_source_usage_freq", "begin_group_lN4JK1E2l/health_related_issues", "begin_group_lN4JK1E2l/health_related_issues_followup", "__version__", "meta/instanceID", "_xform_id_string", "_uuid", "_attachments", "_status", "_submission_time", "_tags", "_notes", "_submitted_by"})</code></pre>
             </ul>
-            <li>Finally, the data source is also renamed from "?format=json" to "table"</li>
         </ul>
         <p>The final renaming columns are:</p>
-        <div class = "container" id = "table1">
-            <table>
-                <tr>
-                    <th>Source column name</th>
-                    <th>New column name</th>
-                </tr>
-                <tr>
-                    <td>id</td>
-                    <td>id - kept for identification of the source records </td>
-                </tr>
-                <tr>
-                    <td>section_1/district</td>
-                    <td>district</td>
-                </tr>
-                <tr>
-                    <td>section_1/region</td>
-                    <td>region</td>
-                </tr>
-                <tr>
-                    <td>begin_group_XWd56z4Et/type_of_water_source</td>
-                    <td>type_of_water_source</td>
-                </tr>
-                <tr>
-                    <td>begin_group_XWd56z4Et/distance_to_water_source</td>
-                    <td>distance_to_water_source</td>
-                </tr>
-                <tr>
-                    <td>begin_group_g5tzRh4Yk/water_source_condition</td>
-                    <td>water_source_condition</td>
-                </tr>
-                <tr>
-                    <td>begin_group_yukPlpiaB/water_status</td>
-                    <td>water_status</td>
-                </tr>
-                <tr>
-                    <td>begin_group_yukPlpiaB/water_has_tests</td>
-                    <td>water_has_tests</td>
-                </tr>
-                <tr>
-                    <td>begin_group_lN4JK1E2l/health_related_issues_followup</td>
-                    <td>health_related_issues_followup</td>
-                </tr>
-                <tr>
-                    <td>begin_group_7JigyZfOV/water_source_improvements</td>
-                    <td>water_source_improvements</td>
-                </tr>
-                <tr>
-                    <td>begin_group_lN4JK1E2l/primary_water_usage</td>
-                    <td>primary_water_usage</td>
-                </tr>
-                <tr>
-                    <td>_geolocation.0</td>
-                    <td>latitude</td>
-                </tr>
-                <tr>
-                    <td>_geolocation.1</td>
-                    <td>longitude</td>
-                </tr>
-            </table>
-        </div>
+                <table >
+                    <tr>
+                        <th>Source column name</th>
+                        <th>New column name</th>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>id - kept for identification of the source records </td>
+                    </tr>
+                    <tr>
+                        <td>section_1/district</td>
+                        <td>district</td>
+                    </tr>
+                    <tr>
+                        <td>section_1/region</td>
+                        <td>region</td>
+                    </tr>
+                    <tr>
+                        <td>begin_group_XWd56z4Et/type_of_water_source</td>
+                        <td>type_of_water_source</td>
+                    </tr>
+                    <tr>
+                        <td>begin_group_XWd56z4Et/distance_to_water_source</td>
+                        <td>distance_to_water_source</td>
+                    </tr>
+                    <tr>
+                        <td>begin_group_g5tzRh4Yk/water_source_condition</td>
+                        <td>water_source_condition</td>
+                    </tr>
+                    <tr>
+                        <td>begin_group_yukPlpiaB/water_status</td>
+                        <td>water_status</td>
+                    </tr>
+                    <tr>
+                        <td>begin_group_yukPlpiaB/water_has_tests</td>
+                        <td>water_has_tests</td>
+                    </tr>
+                    <tr>
+                        <td>begin_group_lN4JK1E2l/health_related_issues_followup</td>
+                        <td>health_related_issues_followup</td>
+                    </tr>
+                    <tr>
+                        <td>begin_group_7JigyZfOV/water_source_improvements</td>
+                        <td>water_source_improvements</td>
+                    </tr>
+                    <tr>
+                        <td>begin_group_lN4JK1E2l/primary_water_usage</td>
+                        <td>primary_water_usage</td>
+                    </tr>
+                    <tr>
+                        <td>_geolocation.0</td>
+                        <td>latitude</td>
+                    </tr>
+                    <tr>
+                        <td>_geolocation.1</td>
+                        <td>longitude</td>
+                    </tr>
+                </table>
+
         <h4> b) Measures and Calculated Columns</h4>
         <p>The following below are Measures added for the Visuals</p>
-        <div class = "container" id = "table2">
             <table>
                 <tr>
                     <th>Chart Title</th>
@@ -407,7 +428,6 @@
                             CONTAINSSTRING('table'[water_source_improvements], "contamination_protection")
                     </td>
             </table>
-        </div>
         
     </div>
 
