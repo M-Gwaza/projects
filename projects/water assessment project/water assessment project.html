@@ -223,184 +223,191 @@
             </ul>
             <li>Additional transformations are added to perfect the data</li>
             <ul>
-                <li>removing columns</li>
-                <li>renaming columns</li>
+                <li>removing 34 columns - only keeping what's needed</li>
+                ```sql
+                    a
+                ``` 
+                <li>renaming 13 columns</li>
             </ul>
             <li>Finally, the data source is also renamed from "?format=json" to "table"</li>
         </ul>
         <p>The final renaming columns are:</p>
-        <table>
-            <tr>
-                <th>Source column name</th>
-                <th>New column name</th>
-            </tr>
-            <tr>
-                <td>id</td>
-                <td>id - kept for identification of the source records </td>
-            </tr>
-            <tr>
-                <td>section_1/district</td>
-                <td>district</td>
-            </tr>
-            <tr>
-                <td>section_1/region</td>
-                <td>region</td>
-            </tr>
-            <tr>
-                <td>begin_group_XWd56z4Et/type_of_water_source</td>
-                <td>type_of_water_source</td>
-            </tr>
-            <tr>
-                <td>begin_group_XWd56z4Et/distance_to_water_source</td>
-                <td>distance_to_water_source</td>
-            </tr>
-            <tr>
-                <td>begin_group_g5tzRh4Yk/water_source_condition</td>
-                <td>water_source_condition</td>
-            </tr>
-            <tr>
-                <td>begin_group_yukPlpiaB/water_status</td>
-                <td>water_status</td>
-            </tr>
-            <tr>
-                <td>begin_group_yukPlpiaB/water_has_tests</td>
-                <td>water_has_tests</td>
-            </tr>
-            <tr>
-                <td>begin_group_lN4JK1E2l/health_related_issues_followup</td>
-                <td>health_related_issues_followup</td>
-            </tr>
-            <tr>
-                <td>begin_group_7JigyZfOV/water_source_improvements</td>
-                <td>water_source_improvements</td>
-            </tr>
-            <tr>
-                <td>begin_group_lN4JK1E2l/primary_water_usage</td>
-                <td>primary_water_usage</td>
-            </tr>
-            <tr>
-                <td>_geolocation.0</td>
-                <td>latitude</td>
-            </tr>
-            <tr>
-                <td>_geolocation.1</td>
-                <td>longitude</td>
-            </tr>
-        </table>
+        <div class = "container" id = "table1">
+            <table>
+                <tr>
+                    <th>Source column name</th>
+                    <th>New column name</th>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>id - kept for identification of the source records </td>
+                </tr>
+                <tr>
+                    <td>section_1/district</td>
+                    <td>district</td>
+                </tr>
+                <tr>
+                    <td>section_1/region</td>
+                    <td>region</td>
+                </tr>
+                <tr>
+                    <td>begin_group_XWd56z4Et/type_of_water_source</td>
+                    <td>type_of_water_source</td>
+                </tr>
+                <tr>
+                    <td>begin_group_XWd56z4Et/distance_to_water_source</td>
+                    <td>distance_to_water_source</td>
+                </tr>
+                <tr>
+                    <td>begin_group_g5tzRh4Yk/water_source_condition</td>
+                    <td>water_source_condition</td>
+                </tr>
+                <tr>
+                    <td>begin_group_yukPlpiaB/water_status</td>
+                    <td>water_status</td>
+                </tr>
+                <tr>
+                    <td>begin_group_yukPlpiaB/water_has_tests</td>
+                    <td>water_has_tests</td>
+                </tr>
+                <tr>
+                    <td>begin_group_lN4JK1E2l/health_related_issues_followup</td>
+                    <td>health_related_issues_followup</td>
+                </tr>
+                <tr>
+                    <td>begin_group_7JigyZfOV/water_source_improvements</td>
+                    <td>water_source_improvements</td>
+                </tr>
+                <tr>
+                    <td>begin_group_lN4JK1E2l/primary_water_usage</td>
+                    <td>primary_water_usage</td>
+                </tr>
+                <tr>
+                    <td>_geolocation.0</td>
+                    <td>latitude</td>
+                </tr>
+                <tr>
+                    <td>_geolocation.1</td>
+                    <td>longitude</td>
+                </tr>
+            </table>
+        </div>
         <h4> b) Measures and Calculated Columns</h4>
         <p>The following below are Measures added for the Visuals</p>
-        <table>
-            <tr>
-                <th>Chart Title</th>
-                <th>Calculation</th>
-            </tr>
-            <tr>
-                <td>Most common water sources</td>
-                <td>
-                    MAXX(
-                        TOPN(1,
-                            SUMMARIZE('table', 'table'[type_of_water_source], "CountWaterSource", COUNTROWS('table')),
-                            [CountWaterSource],
-                            DESC
-                        ),
-                        'table'[type_of_water_source]
-                    )
-                </td>
-            </tr>
-            <tr>
-                <td>Most common distance to water source</td>
-                <td>
-                    CALCULATE(
+        <div class = "container" id = "table2">
+            <table>
+                <tr>
+                    <th>Chart Title</th>
+                    <th>Calculation</th>
+                </tr>
+                <tr>
+                    <td>Most common water sources</td>
+                    <td>
                         MAXX(
-                            TOPN(
-                                1,
-                                SUMMARIZE(
-                                    'table',
-                                    'table'[distance_to_water_source],
-                                    "CountWaterSourceDistance",
-                                    COUNTROWS('table')
-                                ),
-                                [CountWaterSourceDistance],
+                            TOPN(1,
+                                SUMMARIZE('table', 'table'[type_of_water_source], "CountWaterSource", COUNTROWS('table')),
+                                [CountWaterSource],
                                 DESC
                             ),
-                            'table'[distance_to_water_source]
+                            'table'[type_of_water_source]
                         )
-                    )
-                </td>
-            </tr>
-            <tr>
-                <td>Percentage of Tested Water Sources "Not-Okay"</td>
-                <td>
-                    DIVIDE([CountNotOkayWaterSources], [CountTestedWaterSources]) * 100
-                </td>
-            </tr>
-            <tr>
-                <td>CountNotOkayWaterSources - measure </td>
-                <td>
-                    CALCULATE(
-                        COUNTROWS('table'),
-                        'table'[water_status] = "Not Okay",
-                        'table'[water_has_tests] = "yes"
-                    )
-                </td>
-            </tr>
-            <tr>
-                <td> CountTestedWaterSources - measure </td>
-                <td>
-                    CALCULATE(
-                        COUNTROWS('table'),
-                        'table'[water_has_tests] = "yes"
-                    )
-                </td>
-            </tr>
-            <tr>
-                <td>Percentage of water sources "Not_Functioning</td>
-                <td>
-                    DIVIDE(
-                        COUNTROWS(
-                            FILTER(
-                                'table',
-                                'table'[water_source_condition]  = "non-functional"
+                    </td>
+                </tr>
+                <tr>
+                    <td>Most common distance to water source</td>
+                    <td>
+                        CALCULATE(
+                            MAXX(
+                                TOPN(
+                                    1,
+                                    SUMMARIZE(
+                                        'table',
+                                        'table'[distance_to_water_source],
+                                        "CountWaterSourceDistance",
+                                        COUNTROWS('table')
+                                    ),
+                                    [CountWaterSourceDistance],
+                                    DESC
+                                ),
+                                'table'[distance_to_water_source]
                             )
-                        ),
-                        COUNTROWS('table'),
-                        0
-                    ) * 100
-                </td>
-            </tr>
-            <tr>
-                <td>Geospatial Distribution of Water - Calculated column</td>
-                <td>
-                    IF(
-                        OR(
-                            OR(
-                                'table'[water_source_condition] = "non-functional",
-                                'table'[water_source_condition] = "partial-functional"
+                        )
+                    </td>
+                </tr>
+                <tr>
+                    <td>Percentage of Tested Water Sources "Not-Okay"</td>
+                    <td>
+                        DIVIDE([CountNotOkayWaterSources], [CountTestedWaterSources]) * 100
+                    </td>
+                </tr>
+                <tr>
+                    <td>CountNotOkayWaterSources - measure </td>
+                    <td>
+                        CALCULATE(
+                            COUNTROWS('table'),
+                            'table'[water_status] = "Not Okay",
+                            'table'[water_has_tests] = "yes"
+                        )
+                    </td>
+                </tr>
+                <tr>
+                    <td> CountTestedWaterSources - measure </td>
+                    <td>
+                        CALCULATE(
+                            COUNTROWS('table'),
+                            'table'[water_has_tests] = "yes"
+                        )
+                    </td>
+                </tr>
+                <tr>
+                    <td>Percentage of water sources "Not_Functioning</td>
+                    <td>
+                        DIVIDE(
+                            COUNTROWS(
+                                FILTER(
+                                    'table',
+                                    'table'[water_source_condition]  = "non-functional"
+                                )
                             ),
-                            'table'[water_status] = "Not Okay"
-                        ),
-                        "Not Okay",
-                        "Okay"
-                    )
-                </td>
-            </tr>
-            <tr>
-                <td>Health Issues Count - done for all e.g. for cholera</td>
-                <td>
-                    CALCULATE(
-                        COUNTROWS('table'),
-                        CONTAINSSTRING('table'[health_related_issues_followup], "cholera")
-                    )
-                </td>
-            </tr>
-            <tr>
-                <td>Improvement Suggestions -done for all e.g. for contamination protection</td>
-                <td>
-                    CALCULATE(
-                        COUNTROWS('table'),
-                        CONTAINSSTRING('table'[water_source_improvements], "contamination_protection")
-                </td>
-        </table>
+                            COUNTROWS('table'),
+                            0
+                        ) * 100
+                    </td>
+                </tr>
+                <tr>
+                    <td>Geospatial Distribution of Water - Calculated column</td>
+                    <td>
+                        IF(
+                            OR(
+                                OR(
+                                    'table'[water_source_condition] = "non-functional",
+                                    'table'[water_source_condition] = "partial-functional"
+                                ),
+                                'table'[water_status] = "Not Okay"
+                            ),
+                            "Not Okay",
+                            "Okay"
+                        )
+                    </td>
+                </tr>
+                <tr>
+                    <td>Health Issues Count - done for all e.g. for cholera</td>
+                    <td>
+                        CALCULATE(
+                            COUNTROWS('table'),
+                            CONTAINSSTRING('table'[health_related_issues_followup], "cholera")
+                        )
+                    </td>
+                </tr>
+                <tr>
+                    <td>Improvement Suggestions -done for all e.g. for contamination protection</td>
+                    <td>
+                        CALCULATE(
+                            COUNTROWS('table'),
+                            CONTAINSSTRING('table'[water_source_improvements], "contamination_protection")
+                    </td>
+            </table>
+        </div>
         
     </div>
 
