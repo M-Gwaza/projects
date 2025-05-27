@@ -247,35 +247,35 @@
                 <td>region</td>
             </tr>
             <tr>
+                <td>begin_group_XWd56z4Et/type_of_water_source</td>
                 <td>type_of_water_source</td>
-                <td>type_of_water_source</td>
             </tr>
             <tr>
+                <td>begin_group_XWd56z4Et/distance_to_water_source</td>
                 <td>distance_to_water_source</td>
-                <td>distance_to_water_source</td>
             </tr>
             <tr>
+                <td>begin_group_g5tzRh4Yk/water_source_condition</td>
                 <td>water_source_condition</td>
-                <td>water_source_condition</td>
             </tr>
             <tr>
+                <td>begin_group_yukPlpiaB/water_status</td>
                 <td>water_status</td>
-                <td>water_status</td>
             </tr>
             <tr>
+                <td>begin_group_yukPlpiaB/water_has_tests</td>
                 <td>water_has_tests</td>
-                <td>water_has_tests</td>
             </tr>
             <tr>
+                <td>begin_group_lN4JK1E2l/health_related_issues_followup</td>
                 <td>health_related_issues_followup</td>
-                <td>health_related_issues_followup</td>
             </tr>
             <tr>
-                <td>water_source_improvements</td>
+                <td>begin_group_7JigyZfOV/water_source_improvements</td>
                 <td>water_source_improvements</td>
             </tr>
             <tr>
-                <td>primary_water_usage</td>
+                <td>begin_group_lN4JK1E2l/primary_water_usage</td>
                 <td>primary_water_usage</td>
             </tr>
             <tr>
@@ -408,7 +408,7 @@
     <div class="section" id="power-bi-report_improvements">
         <h3>Report Improvements to be made</h3>
         <p>The main issue that is usually associated with a report is <b>performance</b> and this usually happens if the Semantic model is not properly checked for scalability</p>
-        <p>This so-called <b>Semantic model</b> is the logical layer containing the transformations, calculations, and relationships between data sources needed to create reports and dashboard</p>
+        <p>This <b>Semantic model</b> is the logical layer containing the transformations, calculations, and relationships between data sources needed to create reports and dashboard</p>
         <p>Luckily, the storage mode used is <b>Import</b> - requiring data to be refreshed to be up-to-date ensuring flexibility and fast performance</p>
         <p>But just incase any issues are encountered, there a couple of ways that could be implemented to check what is wrong </p>
         <p>1) Performance Analyzer</p>
@@ -422,6 +422,7 @@
         <ul>
             <li>Power Query was already used to remove unnecessary columns and change data types</li>
             <li>But it also be used to see column details to inspect the data</li>
+            <li>A good example is water_status having 47% Empty which needs to be looked into to see if it is wrong or not</li>
         </ul>
         <img src="media/Column Details.png" alt="Project Overview">
         <p>3) Data Studio</p>
